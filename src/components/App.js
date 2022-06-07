@@ -27,7 +27,11 @@ const App = () => {
 
   return (
    <>
-
+    <Route exact path='/'>
+      <Makeup 
+      makeup={makeup}
+      /> 
+    </Route>
    </>
   );
 }
