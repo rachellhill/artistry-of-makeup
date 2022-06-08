@@ -1,9 +1,7 @@
 import React from 'react';
 import '../styles/FavoriteCard.css'
 
-const FavoriteCard = ({ name, brand, image, id }) => {
-    // left off here, need to change classnames below since copied from makeup Card 
-        // add same styling as makeupCard
+const FavoriteCard = ({ name, brand, image, id, removeFavorite }) => {
 
     return (
         <div className='favorite-card'>
@@ -11,6 +9,7 @@ const FavoriteCard = ({ name, brand, image, id }) => {
             </div>
             <div className='favorite-container'>
                 <h2>{name}</h2>
+                <button className="trash-btn" onClick={() => removeFavorite(id)}>🗑</button>
             </div>
         </div>
     )

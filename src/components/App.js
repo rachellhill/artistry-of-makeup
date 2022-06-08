@@ -40,6 +40,13 @@ const App = () => {
     setFavorite([...favorites, favoritedItem])
   }
 
+  const removeFavorite = (favoritedItemId) => {
+    console.log(favoritedItemId)
+    const filteredFavorites = favorites.filter(favoriteProduct => favoritedItemId !== favoriteProduct.id)
+
+    setFavorite(filteredFavorites)
+  }
+
   return (
    <>
     <Nav />
@@ -47,12 +54,14 @@ const App = () => {
       <Makeup 
         makeup={makeup}
         addFavorite={addFavorite}
+        removeFavorite={removeFavorite}
         favorites={favorites}
       /> 
     </Route>
     <Route exact path='/favorites'>
       <Favorites 
         favorites={favorites}
+        removeFavorite={removeFavorite}
       />
     </Route>
    </>

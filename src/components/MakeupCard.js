@@ -4,7 +4,7 @@ import filledHeart from '../assets/filled-heart.png';
 import heart from '../assets/heart.png';
 
 
-const MakeupCard = ({ name, brand, image, id, addFavorite, isFavorited }) => {
+const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFavorited }) => {
     // const [isFavorited, setIsFavorited] = useState(false)
     // if favorites is passed down, would not need line 8. data source is in app and tell this card if its favorited or not
   
@@ -23,6 +23,7 @@ const MakeupCard = ({ name, brand, image, id, addFavorite, isFavorited }) => {
         } else {
             // setIsFavorited(false)
             isFavorited = false
+            removeFavorite(id)
         }
     }
 
