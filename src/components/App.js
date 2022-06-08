@@ -4,7 +4,9 @@ import Makeup from './Makeup';
 import Nav from './Nav';
 import Search from './Search';
 import Favorites from './Favorites';
+import MakeupDetails from './MakeupDetails';
 import '../styles/App.css';
+
 
 const App = () => {
   const [makeup, setMakeup] = useState([])
@@ -72,6 +74,8 @@ const App = () => {
         favorites={favorites}
         removeFavorite={removeFavorite}
       />
+    </Route>
+    <Route exact path="/:id" render={({ match }) => <MakeupDetails id={ match.params.id }/>}>
     </Route>
    </>
   );

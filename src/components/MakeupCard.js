@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/MakeupCard.css'
 import filledHeart from '../assets/filled-heart.png';
 import heart from '../assets/heart.png';
+import { Link } from 'react-router-dom'
 
 
 const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFavorited }) => {
@@ -28,6 +29,7 @@ const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFav
     }
 
     return (
+        <Link to={`/${id}`}>
         <div className='makeup-card'>
             <div className='product-image' src={image} style={{backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", objectFit: "contain"}}>
             </div>
@@ -38,6 +40,7 @@ const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFav
                 </button>
             </div>
         </div>
+        </Link>
     )
 }
 
