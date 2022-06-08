@@ -7,7 +7,7 @@ import '../styles/App.css';
 
 const App = () => {
   const [makeup, setMakeup] = useState([])
-  const [favorite, setFavorite] = useState([])
+  const [favorites, setFavorite] = useState([])
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true)
 
@@ -37,7 +37,7 @@ const App = () => {
   }, [])
 
   const addFavorite = (favoritedItem) => {
-    setFavorite([...favorite, favoritedItem])
+    setFavorite([...favorites, favoritedItem])
   }
 
   return (
@@ -51,7 +51,7 @@ const App = () => {
     </Route>
     <Route exact path='/favorites'>
       <Favorites 
-        favorite={favorite}
+        favorites={favorites}
       />
     </Route>
    </>
