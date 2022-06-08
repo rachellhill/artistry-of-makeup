@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import Makeup from './Makeup';
 import '../styles/App.css';
-import { scryRenderedComponentsWithType } from 'react-dom/test-utils';
 
 const App = () => {
   const [makeup, setMakeup] = useState([])
@@ -15,7 +14,8 @@ const App = () => {
     try {
       const response = await fetch(url)
       const makeup = await response.json()
-      const filteredMakeup = [];
+      // for each item name, split into an array, remove first item in array with shift and join back together in original name format 
+      // set state with new item name
       makeup.forEach(item => {
         const split = item.name.split(' ')
         split.shift()
@@ -37,7 +37,7 @@ const App = () => {
    <>
     <Route exact path='/'>
       <Makeup 
-      makeup={makeup}
+        makeup={makeup}
       /> 
     </Route>
    </>

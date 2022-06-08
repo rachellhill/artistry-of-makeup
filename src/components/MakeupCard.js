@@ -1,13 +1,13 @@
 import React from 'react';
+import '../styles/MakeupCard.css'
 
 const MakeupCard = ({ name, brand, image }) => {
     return (
-        <>
-            <div src={image} style={{backgroundImage: `url(${image})`}}>
-                <h2>{name}</h2>
-                <h3>{brand}</h3>
+        <div className='makeup-card'>
+            <div className='product-image' src={image} style={{backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", objectFit: "contain"}}>
             </div>
-        </>
+            <h2>{name}</h2>
+        </div>
     )
 }
 
