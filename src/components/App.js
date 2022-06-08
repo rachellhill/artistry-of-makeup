@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import Makeup from './Makeup';
+import Nav from './Nav';
 import '../styles/App.css';
 
 const App = () => {
   const [makeup, setMakeup] = useState([])
+  const [favorite, setFavorite] = useState([])
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true)
 
@@ -33,11 +35,17 @@ const App = () => {
     fetchData()
   }, [])
 
+  const addFavorite = (favoritedItem) => {
+    setFavorite([...favorite, favoritedItem])
+  }
+
   return (
    <>
+    <Nav />
     <Route exact path='/'>
       <Makeup 
         makeup={makeup}
+        addFavorite={addFavorite}
       /> 
     </Route>
    </>
