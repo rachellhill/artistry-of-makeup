@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import Makeup from './Makeup';
 import Nav from './Nav';
+import Search from './Search';
 import Favorites from './Favorites';
 import '../styles/App.css';
 
@@ -51,6 +52,7 @@ const App = () => {
    <>
     <Nav />
     <Route exact path='/'>
+      <Search /> 
       <Makeup 
         makeup={makeup}
         addFavorite={addFavorite}

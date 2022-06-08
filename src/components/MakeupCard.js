@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/MakeupCard.css'
 import filledHeart from '../assets/filled-heart.png';
 import heart from '../assets/heart.png';
