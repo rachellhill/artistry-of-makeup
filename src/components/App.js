@@ -9,6 +9,7 @@ import '../styles/App.css';
 const App = () => {
   const [makeup, setMakeup] = useState([])
   const [favorites, setFavorite] = useState([])
+  const [search, setSearch] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true)
 
@@ -27,6 +28,7 @@ const App = () => {
         item.name = string
       })
       setMakeup(makeup)
+      console.log(makeup)
     } catch(error) {
       setError(error.message)
     }
@@ -48,13 +50,18 @@ const App = () => {
     setFavorite(filteredFavorites)
   }
 
+  const searchProducts = makeup.filter(product => product.name.toLowerCase().includes(search) || product.name.includes(search))
+
   return (
    <>
     <Nav />
     <Route exact path='/'>
-      <Search /> 
+      <Search 
+        search={search}
+        setSearch={setSearch}
+      /> 
       <Makeup 
-        makeup={makeup}
+        makeup={searchProducts}
         addFavorite={addFavorite}
         removeFavorite={removeFavorite}
         favorites={favorites}
