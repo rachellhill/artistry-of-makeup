@@ -10,6 +10,7 @@ const Makeup = ({ makeup }) => {
                 <MakeupCard 
                     name={product.name}
                     brand={product.brand}
+                    image={product.image_link}
                 /> 
             </div>
         )
