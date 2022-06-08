@@ -47,6 +47,7 @@ const App = () => {
       <Makeup 
         makeup={makeup}
         addFavorite={addFavorite}
+        favorites={favorites}
       /> 
     </Route>
     <Route exact path='/favorites'>
