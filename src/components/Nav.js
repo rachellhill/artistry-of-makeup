@@ -10,7 +10,9 @@ const Nav = () => {
                 <button className='home-btn'>Home</button>
             </Link>
             <h1>Artistry of Makeup</h1>
-            <button>Favorites</button>
+            <Link to='/favorites'>
+                <button className="show-favorites-btn">Favorites</button>
+            </Link>
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import Makeup from './Makeup';
 import Nav from './Nav';
+import Favorites from './Favorites';
 import '../styles/App.css';
 
 const App = () => {
@@ -47,6 +48,11 @@ const App = () => {
         makeup={makeup}
         addFavorite={addFavorite}
       /> 
+    </Route>
+    <Route exact path='/favorites'>
+      <Favorites 
+        favorite={favorite}
+      />
     </Route>
    </>
   );
