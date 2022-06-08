@@ -2,7 +2,7 @@ import React from 'react';
 import FavoriteCard from './FavoriteCard'
 import '../styles/Favorites.css'
 
-const Favorites = ({ favorites }) => {
+const Favorites = ({ favorites, removeFavorite }) => {
     console.log(favorites)
 
     const favoriteCards = favorites.map(favoriteProduct => {
@@ -13,11 +13,12 @@ const Favorites = ({ favorites }) => {
                 image={favoriteProduct.image}
                 id={favoriteProduct.id}
                 key={favoriteProduct.id}
+                removeFavorite={removeFavorite}
             />
         )
     })
     return (
-        <div>{favoriteCards}</div>
+        <div className='favoritesCard-container'>{favoriteCards}</div>
     )
 }
 

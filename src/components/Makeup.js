@@ -2,17 +2,26 @@ import React from 'react';
 import MakeupCard from './MakeupCard';
 import '../styles/Makeup.css'
 
-const Makeup = ({ makeup, addFavorite }) => {
+const Makeup = ({ makeup, addFavorite, removeFavorite, favorites }) => {
     // console.log(makeup)
     const makeupCards = makeup.map(product => {
+        // have an additional prop that says if this card is favorited or not (pass favorites down)
+        let isFavorited = false;
+        favorites.forEach(favoritedProduct => {
+            if (favoritedProduct.id === product.id) {
+                isFavorited = true
+            }
+        })
         return (
                 <MakeupCard 
                     name={product.name}
                     brand={product.brand}
                     image={product.image_link}
                     addFavorite={addFavorite}
+                    removeFavorite={removeFavorite}
                     id={product.id}
                     key={product.id}
+                    isFavorited={isFavorited}
                 /> 
         )
     })
