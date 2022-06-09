@@ -2,12 +2,16 @@ import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import Makeup from './Makeup';
 import Nav from './Nav';
+import Search from './Search';
 import Favorites from './Favorites';
+import MakeupDetails from './MakeupDetails';
 import '../styles/App.css';
+
 
 const App = () => {
   const [makeup, setMakeup] = useState([])
   const [favorites, setFavorite] = useState([])
+  const [search, setSearch] = useState('')
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(true)
 
@@ -26,6 +30,7 @@ const App = () => {
         item.name = string
       })
       setMakeup(makeup)
+      console.log(makeup)
     } catch(error) {
       setError(error.message)
     }
@@ -47,22 +52,31 @@ const App = () => {
     setFavorite(filteredFavorites)
   }
 
+  const searchProducts = makeup.filter(product => product.name.toLowerCase().includes(search) || product.name.includes(search))
+
   return (
    <>
     <Nav />
     <Route exact path='/'>
+    <h2>Shop All Vegan Products</h2>
+      <Search 
+        search={search}
+        setSearch={setSearch}
+      /> 
       <Makeup 
-        makeup={makeup}
+        makeup={searchProducts}
         addFavorite={addFavorite}
         removeFavorite={removeFavorite}
         favorites={favorites}
       /> 
     </Route>
-    <Route exact path='/favorites'>
+    <Route exact path='/product/favorites'>
       <Favorites 
         favorites={favorites}
         removeFavorite={removeFavorite}
       />
+    </Route>
+    <Route exact path="/:id" render={({ match }) =>  <MakeupDetails id={ match.params.id }/>}>
     </Route>
    </>
   );

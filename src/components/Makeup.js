@@ -3,7 +3,7 @@ import MakeupCard from './MakeupCard';
 import '../styles/Makeup.css'
 
 const Makeup = ({ makeup, addFavorite, removeFavorite, favorites }) => {
-    // console.log(makeup)
+
     const makeupCards = makeup.map(product => {
         // have an additional prop that says if this card is favorited or not (pass favorites down)
         let isFavorited = false;
