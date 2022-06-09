@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Search from './Search';
 import Favorites from './Favorites';
 import MakeupDetails from './MakeupDetails';
+import Error from './Error';
 import '../styles/App.css';
 
 
@@ -12,12 +13,12 @@ const App = () => {
   const [makeup, setMakeup] = useState([])
   const [favorites, setFavorite] = useState([])
   const [search, setSearch] = useState('')
-  const [error, setError] = useState('')
+  const [isError, setIsError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
   const fetchData = async () => {
     const url = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_tag=vegan'
-
+    setIsError(false)
     try {
       const response = await fetch(url)
       const makeup = await response.json()
@@ -32,7 +33,7 @@ const App = () => {
       setMakeup(makeup)
       console.log(makeup)
     } catch(error) {
-      setError(error.message)
+      setIsError(true);
     }
     setIsLoading(false)
   }
@@ -52,10 +53,11 @@ const App = () => {
     setFavorite(filteredFavorites)
   }
 
-  const searchProducts = makeup.filter(product => product.name.toLowerCase().includes(search) || product.name.includes(search))
+  const searchProducts = makeup.filter(product => product.name.toLowerCase().includes(search))
 
   return (
    <>
+   {isError && <Error />}
     <Nav />
     <Route exact path='/'>
     <h2 className="vegan-header">Shop All Vegan Products</h2>
@@ -79,7 +81,7 @@ const App = () => {
     <Route exact path="/:id" render={({ match }) =>  <MakeupDetails id={ match.params.id }/>}>
     </Route>
    </>
-  );
+  )
 }
 
 export default App;
