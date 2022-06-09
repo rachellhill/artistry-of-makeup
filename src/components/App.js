@@ -58,6 +58,7 @@ const App = () => {
    <>
     <Nav />
     <Route exact path='/'>
+    <h2>Shop All Vegan Products</h2>
       <Search 
         search={search}
         setSearch={setSearch}
@@ -69,13 +70,13 @@ const App = () => {
         favorites={favorites}
       /> 
     </Route>
-    <Route exact path='/favorites'>
+    <Route exact path='/product/favorites'>
       <Favorites 
         favorites={favorites}
         removeFavorite={removeFavorite}
       />
     </Route>
-    <Route exact path="/:id" render={({ match }) => <MakeupDetails id={ match.params.id }/>}>
+    <Route exact path="/:id" render={({ match }) =>  <MakeupDetails id={ match.params.id }/>}>
     </Route>
    </>
   );

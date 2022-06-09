@@ -10,7 +10,7 @@ const Nav = () => {
                 <button className='home-btn'>Home</button>
             </Link>
             <h1>Artistry of Makeup</h1>
-            <Link to='/favorites'>
+            <Link to='/product/favorites'>
                 <button className="show-favorites-btn">Favorites</button>
             </Link>
         </div>

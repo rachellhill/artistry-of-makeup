@@ -29,18 +29,18 @@ const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFav
     }
 
     return (
-        <Link to={`/${id}`}>
         <div className='makeup-card'>
-            <div className='product-image' src={image} style={{backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", objectFit: "contain"}}>
-            </div>
+            <Link to={`/${id}`}>
+                <div className='product-image' src={image} style={{backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", objectFit: "contain"}}>
+                <h2 className="makeip-card-name">{name}</h2>
+                </div>
+            </Link>
             <div className='favorite-container'>
-                <h2>{name}</h2>
-                  <button className="heart-btn" onClick={() => addToFavorites()}>
+                <button className="heart-btn" onClick={() => addToFavorites()}>
                     {isFavorited ? <img src={filledHeart} className="favorited-heart" alt='filled heart'></img> : <img src={heart} className="heart" alt='unfilled heart'></img>}
                 </button>
             </div>
         </div>
-        </Link>
     )
 }
 
