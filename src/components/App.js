@@ -58,7 +58,7 @@ const App = () => {
    <>
     <Nav />
     <Route exact path='/'>
-    <h2>Shop All Vegan Products</h2>
+    <h2 className="vegan-header">Shop All Vegan Products</h2>
       <Search 
         search={search}
         setSearch={setSearch}

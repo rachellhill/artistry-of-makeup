@@ -12,7 +12,7 @@ const Search = ({ search, setSearch }) => {
             <input 
                 type='text'
                 className='controlled-search'
-                placeholder='Search vegan prodcts'
+                placeholder='Search vegan products'
                 value={search}
                 onChange={onChange}
             >

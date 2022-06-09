@@ -1,0 +1,57 @@
+[
+    {
+        "id":499,
+        "brand":"covergirl",
+        "name":"CoverGirl truBLEND Bronzer","price":"13.99",
+        "price_sign":null,
+        "currency":null,
+        "image_link":"https://d3t32hsnjxo7q6.cloudfront.net/i/60f9f4f29be5221ff70cf20fabc03564_ra,w158,h184_pa,w158,h184.png",
+        "product_link":"https://well.ca/products/covergirl-trublend-bronzer_112764.html",
+        "website_link":"https://well.ca",
+        "description":"CoverGirl's New truBLEND Bronzer has a marble-baked formula that blends instantly with skin making bronzer lines a thing of the past.Features:Baked blend of colors for the perfect glowBaked to get the perfect bronze for every skin toneBlends instantly, no bronzer linesSuitable for sensitive skin How to Apply: Step 1: Lightly dip brush into bronzer, being careful to tap or blow off excess powder. Step 2: Next, sweep the bronzer over cheeks and temples to create a warm, even, sun-kissed glow. ",
+        "rating":null,
+        "category":null,
+        "product_type":"bronzer",
+        "tag_list":[],"created_at":"2016-10-01T18:36:19.612Z","updated_at":"2017-12-23T21:08:32.604Z","product_api_url":"https://makeup-api.herokuapp.com/api/v1/products/499.json","api_featured_image":"//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/499/original/open-uri20171223-4-1oytpeg?1514063312","product_colors":[]
+    },
+    {
+        "id":486,
+        "brand":"covergirl",
+        "name":"CoverGirl Clean Glow Bronzer","price":"8.99",
+        "price_sign":null,
+        "currency":null,
+        "image_link":"https://d3t32hsnjxo7q6.cloudfront.net/i/4e90929a9c24a51c3db3988b205f3b43_ra,w158,h184_pa,w158,h184.jpeg","product_link":"https://well.ca/products/covergirl-clean-glow-bronzer_78622.html","website_link":"https://well.ca","description":"Flaunt the coveted beach-bronze glow in one simple step. This versatile \n3-in-1 multi-shade compact lets you customize your color to create a \nradiant effect. Use just one color or all three!Features: Beautiful bronze glow in just one stepBlendable, multi-shade compactClean and natural lookHow to Apply: Dip powder brush in bronzer and tap off any excess.\nSweep bronzer on your cheeks and temples.\nUsing a lighter touch, sweep bronzer where the sun naturally hits your face, including your nose, chin, and forehead.\n                            ","rating":5.0,
+        "category":null,
+        "product_type":"bronzer",
+        "tag_list":[],"created_at":"2016-10-01T18:36:01.504Z","updated_at":"2017-12-23T21:08:49.712Z","product_api_url":"https://makeup-api.herokuapp.com/api/v1/products/486.json","api_featured_image":"//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/486/original/data?1514063329",
+        "product_colors":[
+            {
+                "hex_value":"#A9745E","colour_name":null
+            }
+        ]
+    },
+    {
+        "id":473,
+        "brand":"covergirl",
+        "name":"CoverGirl truBLEND Blush in Light Rose",
+        "price":"13.99",
+        "price_sign":null,
+        "currency":null,
+        "image_link":"https://d3t32hsnjxo7q6.cloudfront.net/i/0b8787d62ced45700c0693b869645542_ra,w158,h184_pa,w158,h184.png","product_link":"https://well.ca/products/covergirl-trublend-blush-in-light_112758.html",
+        "website_link":"https://well.ca","description":"Never stop blushing with CoverGirl New truBLEND blush! Features:New marbled baked formulaUltra-blendable and delivers a beautiful, multi-toned result Designed to fit light, medium and deep skin tones alikeHow to Apply: Step 1: Lightly dip brush into blush, then tap or blow off excess powder. Step 2: Next, sweep the blush over and under your cheekbone to create a beautiful, rosy looking flush. ","rating":null,
+        "category":"powder","product_type":"blush",
+        "tag_list":[],"created_at":"2016-10-01T18:35:34.299Z","updated_at":"2017-12-23T21:08:47.473Z","product_api_url":"https://makeup-api.herokuapp.com/api/v1/products/473.json","api_featured_image":"//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/473/original/open-uri20171223-4-11ptefh?1514063327","product_colors":[]
+    },
+    {
+        "id":465,
+        "brand":"covergirl",
+        "name":"CoverGirl truBLEND Blush in Medium Rose",
+        "price":"13.99",
+        "price_sign":null,
+        "currency":null,
+        "image_link":"https://d3t32hsnjxo7q6.cloudfront.net/i/d8969d390fd94976aee71df780f512f2_ra,w158,h184_pa,w158,h184.png","product_link":"https://well.ca/products/covergirl-trublend-blush-in-medium_112759.html",
+        "website_link":"https://well.ca","description":"Never stop blushing with CoverGirl's New truBLEND blush! Features:New marbled baked formulaUltra-blendable and delivers a beautiful, multi-toned result Designed to fit light, medium and deep skin tones alikeHow to Apply: Step 1: Lightly dip brush into blush, then tap or blow off excess powder. Step 2: Next, sweep the blush over and under your cheekbone to create a beautiful, rosy looking flush. ","rating":5.0,
+        "category":"powder","product_type":"blush",
+        "tag_list":[],"created_at":"2016-10-01T18:35:25.098Z","updated_at":"2017-12-23T21:08:46.771Z","product_api_url":"https://makeup-api.herokuapp.com/api/v1/products/465.json","api_featured_image":"//s3.amazonaws.com/donovanbailey/products/api_featured_images/000/000/465/original/open-uri20171223-4-edcwc3?1514063326","product_colors":[]
+    }
+]
