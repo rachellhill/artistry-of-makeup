@@ -6,7 +6,12 @@ describe('Makeup details spec', () => {
     cy.intercept('GET', 'https://makeup-api.herokuapp.com/api/v1/products/499.json', {fixture: 'makeupDetails.json'})
   })
 
-  it('Should', () => {
-    
+  it('Should show a single products details', () => {
+    cy.url().should('eq', 'http://localhost:3000/499')
+    cy.get('.makeup-details-header').contains('CoverGirl truBLEND Bronzer')
+    cy.get('.makeup-details-img').children().contains('covergirl')
+    cy.get('.makeup-details-container').children().contains(`CoverGirl's New truBLEND Bronzer has`)
   })
+
+  // add testing for fetch error handling
 })

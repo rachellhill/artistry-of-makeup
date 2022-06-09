@@ -24,7 +24,7 @@ const MakeupDetails = ({ id }) => {
 
     return (
         <div className="makeup-details-container">
-            <h1>{product.name}</h1>
+            <h1 className='makeup-details-header'>{product.name}</h1>
             <div className='makeup-details-img' src={product.image_link} style={{backgroundImage: `url(${product.image_link})`, backgroundRepeat: "no-repeat", objectFit: "contain"}}>
                 <h2 className='makeup-details-brand'>{product.brand}</h2>
             </div>
