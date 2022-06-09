@@ -57,21 +57,23 @@ const App = () => {
 
   return (
    <>
-   {isError && <Error />}
+   
     <Nav />
-    <Route exact path='/'>
-    <h2 className="vegan-header">Shop All Vegan Products</h2>
-      <Search 
-        search={search}
-        setSearch={setSearch}
-      /> 
-      <Makeup 
-        makeup={searchProducts}
-        addFavorite={addFavorite}
-        removeFavorite={removeFavorite}
-        favorites={favorites}
-      /> 
-    </Route>
+    {isError ? <Error /> : 
+      <Route exact path='/'>
+      <h2 className="vegan-header">Shop All Vegan Products</h2>
+        <Search 
+          search={search}
+          setSearch={setSearch}
+        /> 
+        <Makeup 
+          makeup={searchProducts}
+          addFavorite={addFavorite}
+          removeFavorite={removeFavorite}
+          favorites={favorites}
+        /> 
+      </Route>
+    }
     <Route exact path='/product/favorites'>
       <Favorites 
         favorites={favorites}
