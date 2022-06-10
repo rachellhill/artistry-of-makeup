@@ -13,3 +13,14 @@
     font-size: 30px;
     margin-top: 131px;
 }
+
+
+@media screen and (max-width: 500px) {
+    .favoritesCard-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .search-error, .no-favorites-message {
+        padding: 20px;
+    }
+  }

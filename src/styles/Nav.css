@@ -28,3 +28,15 @@
     font-family: 'Lato', sans-serif;
     font-size: 15px;
 }
+
+@media screen and (max-width: 500px) {
+    .nav-container {
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        padding: 35px;
+    }
+    .title {
+        text-align: center;
+    }
+  }
