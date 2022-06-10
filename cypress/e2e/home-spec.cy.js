@@ -19,8 +19,19 @@ describe('home page', () => {
     cy.get('.makeupCard-container').children().should('have.length', 2)
     cy.get('.makeup-card').first().children().contains('truBLEND Blush in Light Rose')
     cy.get('.makeup-card').last().children().contains('truBLEND Blush in Medium Rose')
+    cy.reload()
   })
 
-  // add test for showing bad request for GET 
+  it.only('should show an error message if no search matches a product', () => {
+    cy.get('.controlled-search').type('hello')
+    cy.get('.search-error').contains('Sorry, nothing matches your search. Try searching a different product!')
+  })
+
+  it('should be able to display error fetches fail', () => {
+    cy.visit('http://localhost:3000/badUrl')
+    cy.get('.error').contains('Something went wrong')
+  })
+
+ 
   // add test for showing search error 
 })

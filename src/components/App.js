@@ -60,12 +60,12 @@ const App = () => {
     <Nav />
     {isError ? <Error /> : 
       <Route exact path='/'>
-        <h2 className="vegan-header">Shop All Vegan Products</h2>
+        <h2 className="vegan-header">All Vegan Products</h2>
         <Search 
           search={search}
           setSearch={setSearch}
           /> 
-        {(searchProducts.length === 0 && search) && <p>Sorry, nothing matches your search. Try searching a different product!</p>}
+        {(searchProducts.length === 0 && search) && <p className="search-error">Sorry, nothing matches your search. Try searching a different product!</p>}
         <Makeup 
           makeup={searchProducts}
           addFavorite={addFavorite}

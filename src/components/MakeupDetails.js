@@ -31,9 +31,9 @@ const MakeupDetails = ({ id }) => {
                 <div className='makeup-details-img' src={product.image_link} style={{backgroundImage: `url(${product.image_link})`, backgroundRepeat: "no-repeat", objectFit: "contain"}}>
                     <h2 className='makeup-details-brand'>{product.brand}</h2>
                 </div>
-                <p>${product.price}</p>
-                <p>{product.description}</p>
-                <p><a href={product.website_link} target="_blank">Click here to purchase</a></p>
+                <p className='makeup-details-price'>${product.price}</p>
+                <p className='makeup-details-description'>{product.description}</p>
+                <p className='makeup-details-website'><a href={product.website_link} target="_blank">Purchase</a></p>
             </div>
             }
         </>

@@ -19,7 +19,7 @@ const Favorites = ({ favorites, removeFavorite }) => {
     })
     return (
         <>
-        {favorites.length === 0 ? <p>Oh no! Looks like you haven't added any favorites 😭 Return home to add some!</p> : 
+        {favorites.length === 0 ? <p className="no-favorites-message">Oh no! Looks like you haven't added any favorites 😭 Return home to add some!</p> : 
         <div className='favoritesCard-container'>{favoriteCards}</div>
         }
         </>

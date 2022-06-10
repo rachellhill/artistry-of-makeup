@@ -3,4 +3,13 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    justify-items: center;
+}
+
+.search-error, .no-favorites-message {
+    text-align: center;
+    color: #7A0736;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    margin-top: 131px;
 }
