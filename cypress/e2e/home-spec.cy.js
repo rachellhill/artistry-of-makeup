@@ -8,7 +8,7 @@ describe('home page', () => {
     cy.get('.nav-container').contains('Artistry of Makeup')
     cy.get('.home-btn').contains("Home")
     cy.get('.show-favorites-btn').contains('Favorites')
-    cy.get('.vegan-header').contains('Shop All Vegan Products')
+    cy.get('.vegan-header').contains('All Vegan Products')
     cy.get('.controlled-search').should('have.attr', 'placeholder').should('include', 'Search vegan products')
     cy.get('.makeupCard-container').children().should('have.length', 4)
     cy.get('.makeup-card').first().children().should("have.length", 2)
@@ -22,7 +22,7 @@ describe('home page', () => {
     cy.reload()
   })
 
-  it.only('should show an error message if no search matches a product', () => {
+  it('should show an error message if no search matches a product', () => {
     cy.get('.controlled-search').type('hello')
     cy.get('.search-error').contains('Sorry, nothing matches your search. Try searching a different product!')
   })
@@ -31,7 +31,4 @@ describe('home page', () => {
     cy.visit('http://localhost:3000/badUrl')
     cy.get('.error').contains('Something went wrong')
   })
-
- 
-  // add test for showing search error 
 })

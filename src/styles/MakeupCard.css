@@ -16,6 +16,11 @@
     background-color: white;
 }
 
+.product-image:hover {
+    transform: scale(1.05)
+}
+
+
 .favorite-container {
     height: 20%;
     display: flex;
