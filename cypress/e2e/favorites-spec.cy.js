@@ -10,9 +10,15 @@ describe('Favorites functionality and page', () => {
     cy.get('.show-favorites-btn').click()
     cy.url().should('eq', 'http://localhost:3000/product/favorites')
     cy.get('.favoritesCard-container').children().should('have.length', 2)
-    cy.get('.favorite-card').first().children().get('.favorite-container').contains('truBLEND Bronzer')
-    cy.get('.favorite-card').last().children().get('.favorite-container').contains('truBLEND Blush in Medium Rose')
+    cy.get('.favorite-product-image').first().children().contains('truBLEND Bronzer')
+    cy.get('.favorite-product-image').last().children().contains('truBLEND Blush in Medium Rose')
   })
 
-  // add testing for error message if no favorites
+  it('Should be able to see favorites error message', () => {
+    cy.reload()
+    cy.get('.show-favorites-btn').click()
+    cy.url().should('eq', 'http://localhost:3000/product/favorites')
+    cy.get('.no-favorites-message').contains("Oh no! Looks like you haven't added any favorites 😭 Return home to add some!")
+  })
+
 })

@@ -13,5 +13,8 @@ describe('Makeup details spec', () => {
     cy.get('.makeup-details-container').children().contains(`CoverGirl's New truBLEND Bronzer has`)
   })
 
-  // add testing for fetch error handling
+  it('should be able to display error fetches fail', () => {
+    cy.visit('http://localhost:3000/badUrl')
+    cy.get('.error').contains('Something went wrong')
+  })
 })

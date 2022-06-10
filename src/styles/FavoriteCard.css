@@ -37,4 +37,9 @@
     background: none;
     border: none;
     font-size: 25px;
+    padding-top: 7px;
+}
+
+.trash-btn:hover {
+    transform: scale(1.5)
 }
