@@ -30,9 +30,9 @@ const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFav
 
     return (
         <div className='makeup-card'>
-            <Link to={`/${id}`}>
+            <Link to={`/${id}`} style={{textDecoration: 'none', color: 'black'}}>
                 <div className='product-image' src={image} style={{backgroundImage: `url(${image})`, backgroundRepeat: "no-repeat", objectFit: "contain"}}>
-                <h2 className="makeip-card-name">{name}</h2>
+                <h2 className="makeup-card-name">{name}</h2>
                 </div>
             </Link>
             <div className='favorite-container'>

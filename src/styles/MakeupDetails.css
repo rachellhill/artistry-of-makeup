@@ -1,7 +1,28 @@
 .makeup-details-container {
     height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
 }
 
 .makeup-details-img {
-    height: 188px;
+    height: 230px;
+    width: 161px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.makeup-details-header, .makeup-details-brand {
+    font-family: 'Lato', sans-serif;
+    color: #7A0736;
+}
+
+.makeup-details-price,
+.makeup-details-description,
+.makeup-details-website {
+    font-family: 'Lato', sans-serif;
+    color: #7A0736;
+    font-size: 25px;
 }

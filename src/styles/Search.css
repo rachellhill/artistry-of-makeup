@@ -2,3 +2,12 @@
     display: flex;
     justify-content: center;
 }
+
+.controlled-search {
+    height: 40px;
+    width: 400px;
+    text-align: center;
+    border: none;
+    border-radius: 30px;
+    font-family: 'Lato', sans-serif;
+}

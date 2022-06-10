@@ -1,7 +1,14 @@
 .makeupCard-container {
     padding: 20px;
+    padding-top: 40px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 20px;
     justify-items: center;
   }
+
+@media screen and (max-width: 500px) {
+  .makeupCard-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

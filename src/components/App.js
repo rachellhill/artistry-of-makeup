@@ -5,6 +5,7 @@ import Nav from './Nav';
 import Search from './Search';
 import Favorites from './Favorites';
 import MakeupDetails from './MakeupDetails';
+import Error from './Error';
 import '../styles/App.css';
 
 
@@ -12,12 +13,12 @@ const App = () => {
   const [makeup, setMakeup] = useState([])
   const [favorites, setFavorite] = useState([])
   const [search, setSearch] = useState('')
-  const [error, setError] = useState('')
+  const [isError, setIsError] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
 
   const fetchData = async () => {
     const url = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_tag=vegan'
-
+    setIsError(false)
     try {
       const response = await fetch(url)
       const makeup = await response.json()
@@ -32,7 +33,7 @@ const App = () => {
       setMakeup(makeup)
       console.log(makeup)
     } catch(error) {
-      setError(error.message)
+      setIsError(true);
     }
     setIsLoading(false)
   }
@@ -52,24 +53,27 @@ const App = () => {
     setFavorite(filteredFavorites)
   }
 
-  const searchProducts = makeup.filter(product => product.name.toLowerCase().includes(search) || product.name.includes(search))
+  const searchProducts = makeup.filter(product => product.name.toLowerCase().includes(search))
 
   return (
    <>
     <Nav />
-    <Route exact path='/'>
-    <h2 className="vegan-header">Shop All Vegan Products</h2>
-      <Search 
-        search={search}
-        setSearch={setSearch}
-      /> 
-      <Makeup 
-        makeup={searchProducts}
-        addFavorite={addFavorite}
-        removeFavorite={removeFavorite}
-        favorites={favorites}
-      /> 
-    </Route>
+    {isError ? <Error /> : 
+      <Route exact path='/'>
+        <h2 className="vegan-header">All Vegan Products</h2>
+        <Search 
+          search={search}
+          setSearch={setSearch}
+          /> 
+        {(searchProducts.length === 0 && search) && <p className="search-error">Sorry, nothing matches your search. Try searching a different product!</p>}
+        <Makeup 
+          makeup={searchProducts}
+          addFavorite={addFavorite}
+          removeFavorite={removeFavorite}
+          favorites={favorites}
+        /> 
+      </Route>
+    }
     <Route exact path='/product/favorites'>
       <Favorites 
         favorites={favorites}
@@ -79,7 +83,7 @@ const App = () => {
     <Route exact path="/:id" render={({ match }) =>  <MakeupDetails id={ match.params.id }/>}>
     </Route>
    </>
-  );
+  )
 }
 
 export default App;
