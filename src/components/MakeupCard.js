@@ -1,9 +1,9 @@
 import React from 'react';
-import '../styles/MakeupCard.css'
+import '../styles/MakeupCard.css';
 import filledHeart from '../assets/filled-heart.png';
 import heart from '../assets/heart.png';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 
 const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFavorited }) => {

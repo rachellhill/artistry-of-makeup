@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Error from './Error'
-import '../styles/MakeupDetails.css'
+import PropTypes from 'prop-types';
+import Error from './Error';
+import '../styles/MakeupDetails.css';
 
 const MakeupDetails = ({ id }) => {
     const [product, setProduct] = useState({})
@@ -13,7 +14,6 @@ const MakeupDetails = ({ id }) => {
             const response = await fetch(url)
             const product = await response.json()
             setProduct(product)
-            console.log("product", product)
         } catch(error) {
             setIsError(true)
         }
@@ -41,3 +41,7 @@ const MakeupDetails = ({ id }) => {
 }
 
 export default MakeupDetails;
+
+MakeupDetails.propTypes = {
+    id: PropTypes.number.isRequired
+}
