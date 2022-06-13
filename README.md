@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Artistry of Makeup
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployed Link
 
-## Available Scripts
+## Overview
+Artistry of Makeup is a web application that allows a user to browse through vegan makeup products, favorite items, search through the items, and view additional details about a specific product. 
 
-In the project directory, you can run:
+## Author
+[Rachel Hill](https://github.com/rachellhill)
 
-### `npm start`
+## Technologies Used
+- React 
+- Router 
+- CSS
+- HTML 
+- Cypress 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Set Up Instructions
+1. Clone down this repository
+2. `cd` into `artistry-of-makeup`
+3. run `npm i`
+4. run `npm start` to view the app in a browser
+5. run `npm run cypress` to view testing 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features 
+- A user is able to view all products on the landing page. 
+- A user can favorite and unfavorite products. 
+- A user can view their favorited products
+- A user can search for products and see a live search occur 
+- A user can click on a product to view its specific details
 
-### `npm test`
+## Application in Action
+![giphy-1](./src/assets/giphy-1.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![giphy-2](./src/assets/giphy-2.gif)
 
-### `npm run build`
+![giphy-3](./src/assets/giphy-3.gif)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Future Additions 
+- Simulate a buying experience where a user can purchase a product
+- Login page where a user can see their account details and previous purchases
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Spec
+Project spec can be found [here](https://frontend.turing.edu/projects/module-3/showcase.html). 
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Wireframe & Architecture
+Wireframe can be found [here](https://excalidraw.com/). 
