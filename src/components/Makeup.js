@@ -1,28 +1,28 @@
 import React from 'react';
 import MakeupCard from './MakeupCard';
-import '../styles/Makeup.css'
+import PropTypes from 'prop-types';
+import '../styles/Makeup.css';
 
 const Makeup = ({ makeup, addFavorite, removeFavorite, favorites }) => {
 
     const makeupCards = makeup.map(product => {
-        // have an additional prop that says if this card is favorited or not (pass favorites down)
-        let isFavorited = false;
+        let isFavorited = false
         favorites.forEach(favoritedProduct => {
             if (favoritedProduct.id === product.id) {
                 isFavorited = true
             }
         })
         return (
-                <MakeupCard 
-                    name={product.name}
-                    brand={product.brand}
-                    image={product.image_link}
-                    addFavorite={addFavorite}
-                    removeFavorite={removeFavorite}
-                    id={product.id}
-                    key={product.id}
-                    isFavorited={isFavorited}
-                /> 
+            <MakeupCard 
+                name={product.name}
+                brand={product.brand}
+                image={product.image_link}
+                addFavorite={addFavorite}
+                removeFavorite={removeFavorite}
+                id={product.id}
+                key={product.id}
+                isFavorited={isFavorited}
+            /> 
         )
     })
 
@@ -33,4 +33,9 @@ const Makeup = ({ makeup, addFavorite, removeFavorite, favorites }) => {
     )
 }
 
-export default Makeup
+export default Makeup;
+
+Makeup.propTypes = {
+    makeup: PropTypes.array.isRequired,
+    addFavorite: PropTypes.func.isRequired
+}

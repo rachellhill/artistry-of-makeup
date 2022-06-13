@@ -14,7 +14,6 @@ const App = () => {
   const [favorites, setFavorite] = useState([])
   const [search, setSearch] = useState('')
   const [isError, setIsError] = useState(false)
-  const [isLoading, setIsLoading] = useState(true)
 
   const fetchData = async () => {
     const url = 'https://makeup-api.herokuapp.com/api/v1/products.json?brand=covergirl&product_tag=vegan'
@@ -22,8 +21,6 @@ const App = () => {
     try {
       const response = await fetch(url)
       const makeup = await response.json()
-      // for each item name, split into an array, remove first item in array with shift and join back together in original name format 
-      // set state with new item name
       makeup.forEach(item => {
         const split = item.name.split(' ')
         split.shift()
@@ -31,11 +28,9 @@ const App = () => {
         item.name = string
       })
       setMakeup(makeup)
-      console.log(makeup)
     } catch(error) {
-      setIsError(true);
+      setIsError(true)
     }
-    setIsLoading(false)
   }
   
   useEffect(() => {
@@ -47,9 +42,7 @@ const App = () => {
   }
 
   const removeFavorite = (favoritedItemId) => {
-    console.log(favoritedItemId)
     const filteredFavorites = favorites.filter(favoriteProduct => favoritedItemId !== favoriteProduct.id)
-
     setFavorite(filteredFavorites)
   }
 

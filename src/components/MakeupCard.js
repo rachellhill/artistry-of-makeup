@@ -1,18 +1,15 @@
 import React from 'react';
-import '../styles/MakeupCard.css'
+import '../styles/MakeupCard.css';
 import filledHeart from '../assets/filled-heart.png';
 import heart from '../assets/heart.png';
-import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 
 const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFavorited }) => {
-    // const [isFavorited, setIsFavorited] = useState(false)
-    // if favorites is passed down, would not need line 8. data source is in app and tell this card if its favorited or not
-  
     const addToFavorites = () => {
         if (!isFavorited) {
             isFavorited = true
-            // setIsFavorited(true)
             const favoritedItem = {
                 name: name,
                 brand: brand,
@@ -22,7 +19,6 @@ const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFav
             }
             addFavorite(favoritedItem)
         } else {
-            // setIsFavorited(false)
             isFavorited = false
             removeFavorite(id)
         }
@@ -45,3 +41,11 @@ const MakeupCard = ({ name, brand, image, id, addFavorite, removeFavorite, isFav
 }
 
 export default MakeupCard;
+
+MakeupCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    brand: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+    addFavorite: PropTypes.func
+}
