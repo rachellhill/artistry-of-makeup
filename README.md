@@ -1,6 +1,7 @@
 # Artistry of Makeup
 
 ## Deployed Link
+[Link](https://artistry-of-makeup.herokuapp.com/)
 
 ## Overview
 Artistry of Makeup is a web application that allows a user to browse through vegan makeup products, favorite items, search through the items, and view additional details about a specific product. 
